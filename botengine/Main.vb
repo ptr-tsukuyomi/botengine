@@ -351,7 +351,7 @@
                           Dim str = Get_BusInfoString(Now, 5)
                           Send_Status(ckey, cskey, akey, askey, str)
                       End Sub)
-            tt.begintime = New DateTime(2013, 8, 20, 14 + i / 2, 30 * (i Mod 2), 0)
+            tt.begintime = New DateTime(2013, 8, 20, 14 + Math.Truncate(i / 2), 30 * (i Mod 2), 0)
             tt.interval = New TimeSpan(24, 0, 0)
             AddIntervalTask(tt)
         Next
