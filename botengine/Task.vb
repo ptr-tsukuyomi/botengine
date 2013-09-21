@@ -31,7 +31,7 @@
             If tt._nexttime.Year = Now.Year AndAlso
                 tt._nexttime.Month = Now.Month AndAlso
                 tt._nexttime.Day = Now.Day AndAlso
-                CType(tt._nexttime.TimeOfDay.TotalSeconds, Integer) = CType(Now.TimeOfDay.TotalSeconds, Integer) Then
+                Math.Truncate(tt._nexttime.TimeOfDay.TotalSeconds) = Math.Truncate(Now.TimeOfDay.TotalSeconds) Then
                 AddTask(tt.act)
                 tt._nexttime += tt.interval
             End If
